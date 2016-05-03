@@ -5,6 +5,7 @@
 #include <sstream>
 #include <unistd.h>
 #include <vector>
+#include <stdio.h>
 #include "print.c"
 using namespace std;
 
@@ -114,6 +115,7 @@ int main(int argc, char **argv) {
 			ss >> command;
 			int reg_num = valid(command);
 			if(reg_num != -1){
+				outs << "\tMOV R1, R" << reg_num << endl;
 				outs << "\tBL print_number" << endl;
 			}
 		}
