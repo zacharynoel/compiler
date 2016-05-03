@@ -6,7 +6,10 @@ main:
 line_10:
 	MOV R9, #5
 line_20:
-	BL print_number
+	MOV R10, #6
+line_30:
+	CMP R10 , R9
+	BLT line_10
 
 quit:
 	MOV R0, #42
