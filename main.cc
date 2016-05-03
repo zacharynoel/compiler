@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
 		line_no++;
 		if (!cin) break;
 		transform(s.begin(), s.end(), s.begin(), ::toupper); //Uppercaseify
-		auto it = s.find("QUIT"); //TERMINATE COMPILER
+		auto it = s.find("END"); //TERMINATE COMPILER
 		if (it != string::npos) break;
 		stringstream ss(s); //Turn s into a stringstream
 		int label;
@@ -109,7 +109,6 @@ int main(int argc, char **argv) {
 			}
 		}
 	
-		/*
 		else if (command == "IF") {
 			ss >> command;
 			int register1 = valid(command);
@@ -130,7 +129,7 @@ int main(int argc, char **argv) {
 			string lineNum = command;
 
 			if (register1 != -1 && register2 != -1) {
-				outs << "\tCMP R" << register1 << " , R" << register2 << "\n";
+				outs << "\tCMP R" << register1 << ", R" << register2 << "\n";
 				if (then == "THEN" && go_to == "GOTO") {
 					if (comparison == ">"){
 						outs << "\tBGT line_" << lineNum << "\n";
@@ -152,7 +151,7 @@ int main(int argc, char **argv) {
 					}
 				}
 			}
-		}*/
+		}
 	}
 
 	//Clean up the file at the bottom
