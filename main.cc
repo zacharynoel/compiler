@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
 				outs << "\tBL print_number" << endl;
 			}
 		}
-		
+
 		else if (command == "IF") {
 			ss >> command;
 			int register1 = valid(command);
@@ -137,7 +137,7 @@ int main(int argc, char **argv) {
 			string lineNum = command;
 
 			if (register1 != -1 && register2 != -1) {
-				outs << "\tCMP R" << register1 << " , R" << register2 << "\n";
+				outs << "\tCMP R" << register1 << ", R" << register2 << "\n";
 				if (then == "THEN" && go_to == "GOTO") {
 					if (comparison == ">"){
 						outs << "\tBGT line_" << lineNum << "\n";
