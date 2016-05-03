@@ -1,9 +1,9 @@
 #include <stdio.h>
 
-print_number(int x) {
+void print_number(int x) {
 	printf("%i\n",x);
 }
 
-print_string(char *str) {
+void print_string(char *str) {
 	printf("%s",str);
 }

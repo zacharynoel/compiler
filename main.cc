@@ -5,6 +5,7 @@
 #include <sstream>
 #include <unistd.h>
 #include <vector>
+#include "print.c"
 using namespace std;
 
 vector<string> reg = {"A","B","C","I","J","X","Y","Z"};
