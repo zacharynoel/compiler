@@ -47,7 +47,7 @@ int main(int argc, char **argv) {
 		line_no++;
 		if (!cin) break;
 		transform(s.begin(), s.end(), s.begin(), ::toupper); //Uppercaseify
-		auto it = s.find("QUIT"); //TERMINATE COMPILER
+		auto it = s.find("END"); //TERMINATE COMPILER
 		if (it != string::npos) break;
 		stringstream ss(s); //Turn s into a stringstream
 		int label;
@@ -106,6 +106,14 @@ int main(int argc, char **argv) {
 						}
 					}
 				}
+			}
+		}
+
+		else if(command == "PRINT"){
+			ss >> command;
+			int reg_num = valid(command);
+			if(reg_num != -1){
+				outs << "\tBL print_number" << endl;
 			}
 		}
 	}

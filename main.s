@@ -4,8 +4,11 @@ main:
 	PUSH {R4-R12}
 
 line_10:
-	ADD R4, R5, R6
+	MOV R9, #5
 line_20:
-	SUB R4, R5, R6
-line_30:
-	MUL R4, R5, R6
+	BL print_number
+
+quit:
+	MOV R0, #42
+	POP {R4-R12}
+	POP {PC}
