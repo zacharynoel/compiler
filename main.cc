@@ -108,6 +108,51 @@ int main(int argc, char **argv) {
 				}
 			}
 		}
+	
+		/*
+		else if (command == "IF") {
+			ss >> command;
+			int register1 = valid(command);
+			
+			ss >> command;
+			string comparison = command;
+			
+			ss >> command;
+			int register2 = valid(command);
+			
+			ss >> command;
+			string then = command;
+			
+			ss >> command;
+			string go_to = command;
+			
+			ss >> command;
+			string lineNum = command;
+
+			if (register1 != -1 && register2 != -1) {
+				outs << "\tCMP R" << register1 << " , R" << register2 << "\n";
+				if (then == "THEN" && go_to == "GOTO") {
+					if (comparison == ">"){
+						outs << "\tBGT line_" << lineNum << "\n";
+					}
+					else if (comparison == "<"){
+						outs << "\tBLT line_" << lineNum << "\n";
+					}
+					else if (comparison == "=="){
+						outs << "\tBEQ line_" << lineNum << "\n";
+					}
+					else if (comparison == "<="){
+						outs << "\tBLE line_" << lineNum << "\n";
+					}
+					else if (comparison == ">="){
+						outs << "\tBGE line_" << lineNum << "\n";
+					}
+					else if (comparison == "!="){
+						outs << "\tBNE line_" << lineNum << "\n";
+					}
+				}
+			}
+		}*/
 	}
 
 	//Clean up the file at the bottom
