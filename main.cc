@@ -70,7 +70,7 @@ int main(int argc, char **argv) {
 			outs << "\tBAL line_" << target << endl;
 			continue;
 		}
-		else if (command == "EXIT") {
+		else if (command == "EXIT" || command == "END") {
 			outs << "\tBAL quit\n";
 			continue;
 		}
@@ -115,7 +115,7 @@ int main(int argc, char **argv) {
 			ss >> command;
 			int reg_num = valid(command);
 			if(reg_num != -1){
-				outs << "\tMOV R1, R" << reg_num << endl;
+				outs << "\tMOV R0, R" << reg_num << endl;
 				outs << "\tBL print_number" << endl;
 			}
 		}
@@ -171,7 +171,7 @@ int main(int argc, char **argv) {
 
 	if (assemble_only) return 0; //When you're debugging you should run bb8 with a parameter
 
-	if (system("g++ main.s")) { //Compile your assembler code and check for errors
+	if (system("g++ main.s print.o")) { //Compile your assembler code and check for errors
 		cout << "Assembling failed, which means your compiler screwed up.\n";
 		return 1;
 	}
