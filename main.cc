@@ -20,6 +20,8 @@ int valid (string command){
 	return -1;
 }
 
+using namespace std;
+
 void die(int line_no = 0) {
 	cout << "Syntax Error on line " << line_no << endl;
 	exit(1);
